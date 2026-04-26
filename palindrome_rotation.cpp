@@ -66,8 +66,12 @@ void top_k_palindromes(std:: string str, std::string delims, int k, v2* top_k){
         start = str.find_first_not_of(delims, end);
         end = str.find_first_of(delims, start);
         if (end == std::string::npos){
-            end = s_len;
+            end = s_len - 1;
+            if (is_palindrome(str, start, end - 1)){
+                pl_to_topk(start, end - start, k, top_k);
+            }
             break;
+            
         }
         
 
