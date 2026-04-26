@@ -146,11 +146,6 @@ int main(){
     top_k_sort(k, top_k, str);
     
 
-    for (int i = 0; i < k; ++i){
-        std::cout << top_k[i].ind << ' ' << top_k[i].len << '\n';
-        std::cout << top_k[i].word << '\n';
-    }
-
     std::cout << str << '\n';
 
     delete[] top_k;
